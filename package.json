@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register -R spec -u bdd -w"
+    "test": "mocha -b --compilers coffee:coffee-script/register"
   },
   "dependencies": {
     "body-parser": "~1.12.0",
