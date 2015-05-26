@@ -21,7 +21,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('node-compass')({mode: 'expanded'}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/css', express.static(path.join(__dirname, 'public/stylesheets')));
+app.use('/js', express.static(path.join(__dirname, 'public/javascripts')));
 
 app.use('/', routes);
 app.use('/users', users);
