@@ -17,3 +17,12 @@ describe 'routes', ->
         done()
         return
     return
+
+  describe '#render_sign_in_page', (done) ->
+    it 'should render sign in page', ->
+      request(app).get('/signin').expect(200).end (err, res) ->
+        if err
+          return done(err)
+        done()
+        return
+      return
