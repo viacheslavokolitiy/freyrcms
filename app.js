@@ -27,6 +27,10 @@ app.use('/js', express.static(path.join(__dirname, 'public/javascripts')));
 app.use('/', routes);
 app.use('/users', users);
 
+app.get('/signup', function (req, res) {
+    res.render('signup', {title: 'Sign up'});
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

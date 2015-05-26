@@ -8,3 +8,12 @@ describe 'routes', ->
     it 'should render index page with Express', ->
       request(app).get('/').end (err,res) ->
         expect(res).to.equal("Express")
+
+  describe '#render_signup_page', (done) ->
+    it 'should render signup page', ->
+      request(app).get('/signup').expect(200).end (err, res) ->
+        if err
+          return done(err)
+        done()
+        return
+    return
