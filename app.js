@@ -14,9 +14,9 @@
 
   bodyParser = require('body-parser');
 
-  routes = require('./js/index');
+  routes = require('./routes/index');
 
-  users = require('./js/users');
+  users = require('./routes/users');
 
   app = express();
 
