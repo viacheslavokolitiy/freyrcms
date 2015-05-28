@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "mocha -b --compilers coffee:coffee-script/register"
+    "test": "mocha --compilers coffee:coffee-script/register -bdd",
+    "coverage": "env COVERAGE=1 mocha -R html-cov > coverage.html && open coverage.html"
   },
   "dependencies": {
     "body-parser": "~1.12.0",
@@ -17,7 +18,9 @@
   },
   "devDependencies": {
     "chai": "^2.3.0",
+    "jsdom": "^5.4.3",
     "mocha": "^2.2.5",
+    "mocha-jsdom": "^0.4.0",
     "should": "^6.0.3",
     "supertest": "^1.0.1"
   }

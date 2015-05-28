@@ -13,6 +13,7 @@ addons:
 install:
   - npm install chai mocha should supertest --save-dev
   - npm install body-parser coffee-script debug ejs express morgan node-compass serve-favicon bootstrap pg
+  - npm i --save-dev mocha-jsdom
 
 before_script:
   - psql -c 'create database freyrcms_development;' -U postgres
