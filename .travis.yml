@@ -12,7 +12,7 @@ addons:
 
 install:
   - npm install chai mocha should supertest --save-dev
-  - npm install body-parser coffee-script debug ejs express morgan node-compass serve-favicon bootstrap pg
+  - npm install body-parser coffee-script debug ejs express morgan node-compass serve-favicon bootstrap pg cookie-parser
   - npm i --save-dev mocha-jsdom
 
 before_script:
